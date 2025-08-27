@@ -153,6 +153,16 @@ end
 
 ##
 eff(Water(),Ice())
+eff(Water(),Fire())
+eff(Fighting(),Fighting())
+eff(Ground(),Ground())
+eff(Normal(),Water())
+eff(Water(),Grass())
+eff(Electric(),Ground())
+eff(Water(),Normal())
+eff(Fire(),Electric())
+eff(Normal(),Normal())
+eff(Water(),Electric())
 ##
 
 function eff_string(atk, def)
@@ -169,6 +179,13 @@ function eff_string(atk, def)
 end
 
 eff_string(Water(),Fire())
+eff_string(Normal(), Normal())
+eff_string(Water(),Fire())
+eff_string(Grass(), Fighting())
+eff_string(Ice(), Fire())
+eff_string(Normal(),Water())
+eff_string(Electric(),Ice())
+eff_string(Fighting(),Fighting())
 
 function attack(atk, def)
     x = eff_string(atk,def)
